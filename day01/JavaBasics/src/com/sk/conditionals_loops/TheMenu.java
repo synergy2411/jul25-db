@@ -19,8 +19,29 @@ public class TheMenu {
         System.out.println("4. Multiple");
 
         int choice = scanner.nextInt();
-        System.out.println("Your Choice : " + choice);
-//        Use Switch Statement to perform operation
+
+        switch (choice) {
+            case 1: {
+                System.out.println("The Result is : " + (firstNumber + secondNumber));
+                break;
+            }
+            case 2: {
+                System.out.println("The Result is : " + (firstNumber - secondNumber));
+                break;
+            }
+            case 3: {
+                System.out.println("The Result is : " + (firstNumber / secondNumber));
+                break;
+            }
+            case 4: {
+                System.out.println("The Result is : " + (firstNumber * secondNumber));
+                break;
+            }
+            default:{
+                System.out.println("Sorry! Wrong choice. Try again!");
+            }
+        }
+
     }
 
 }
