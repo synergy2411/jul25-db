@@ -13,6 +13,10 @@ public class StudentRunner {
 
         System.out.println(person.getDetails());
 
+        System.out.println(student instanceof Student);     // true
+        System.out.println(student instanceof Person);      // true
+        System.out.println(student instanceof Object);      // true
+
 
     }
 }
