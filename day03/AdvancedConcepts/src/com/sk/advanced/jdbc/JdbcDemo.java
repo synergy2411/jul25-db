@@ -4,33 +4,36 @@ import java.sql.*;
 
 public class JdbcDemo {
 
+//    final private static String SqlUrl = "jdbc:mysql://localhost:3306/database_name";
     final private static String url = "jdbc:postgresql://localhost:5432/inventory_db";
     final private static String username = "postgres";
     final private static String password = "tiger";
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws SQLException {
 
         try {
+//            Class.forName("com.mysql.cj.jdbc.Driver");
             Class.forName("org.postgresql.Driver");
         } catch (ClassNotFoundException e) {
             System.out.println(e.getMessage());
         }
 
-        try{
-            Connection connection = DriverManager.getConnection(url, username, password);
+//        TRY_WITH_RESOURCE - Closes resource connection automatically
+        try (Connection connection = DriverManager.getConnection(url, username, password);) {
+
 //            Statement statement = connection.createStatement();
 //            DELETE OPERATION
 //            String query = String.format("DELETE FROM products WHERE id = %d", 3);
 
 //            USING PREPARED STATEMENT
-//            PreparedStatement preparedStatement = connection.prepareStatement("DELETE FROM products WHERE id = ?");
-//            preparedStatement.setInt(1, 2);
-//            int rowsAffected = preparedStatement.executeUpdate();
-//            if(rowsAffected > 0 ){
-//                System.out.println("Deleted record successfully.");
-//            }else{
-//                System.out.println("Unable to delete the record.");
-//            }
+            PreparedStatement preparedStatement = connection.prepareStatement("DELETE FROM products WHERE id = ?");
+            preparedStatement.setInt(1, 2);
+            int rowsAffected = preparedStatement.executeUpdate();
+            if(rowsAffected > 0 ){
+                System.out.println("Deleted record successfully.");
+            }else{
+                System.out.println("Unable to delete the record.");
+            }
 
 //            UPDATE OPERATION
 //            String query = String.format("UPDATE products SET price=%d WHERE id=%d", 89, 1);
@@ -60,8 +63,6 @@ public class JdbcDemo {
 //                int quantity = resultSet.getInt("quantity");
 //                System.out.println(id + " " + title + " " + price + " " + quantity );
 //            }
-        }catch(SQLException e){
-            System.out.println(e.getMessage());
         }
     }
 }
