@@ -20,9 +20,7 @@ public class MapRunner {
 
 
         String str = "This is an awesome occasion. This has never happened before.";
-
         Map<Character, Integer> letterOccurrences = new HashMap<>();
-
         char[] charArray = str.toCharArray();
         for(char character : charArray){
             Integer i = letterOccurrences.get(character);
@@ -34,6 +32,16 @@ public class MapRunner {
         }
         System.out.println(letterOccurrences);
 
-
+        Map<String, Integer> wordOccurrence = new HashMap<>();
+        String[] words = str.split(" ");
+        for(String word : words){
+            Integer i = wordOccurrence.get(word);
+            if(i == null ){
+                wordOccurrence.put(word, 1);
+            }else{
+                wordOccurrence.put(word, i +1);
+            }
+        }
+        System.out.println(wordOccurrence);
     }
 }
