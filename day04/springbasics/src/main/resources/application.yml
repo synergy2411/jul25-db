@@ -1,0 +1,7 @@
+spring:
+  application:
+    name: SpringBasics
+#logging:
+#  level:
+#    org:
+#      springframework: DEBUG
