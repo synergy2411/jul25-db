@@ -23,7 +23,8 @@
   - Two Dependencies
     - junit-jupiter-api
     - junit-jupiter-engine
-- Mockito
+- Stub : Dummy implementation
+- Mockito : mock the behaviour with implementation
 
 # Day 05 and Day 06 -
 - Spring
