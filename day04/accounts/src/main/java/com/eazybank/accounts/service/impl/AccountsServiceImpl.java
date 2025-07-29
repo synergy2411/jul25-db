@@ -9,19 +9,20 @@ import com.eazybank.accounts.mapper.CustomerMapper;
 import com.eazybank.accounts.repository.AccountsRepository;
 import com.eazybank.accounts.repository.CustomerRepository;
 import com.eazybank.accounts.service.AccountsService;
+import lombok.AllArgsConstructor;
+import lombok.NoArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.Optional;
 import java.util.Random;
 
-
+@AllArgsConstructor
+@NoArgsConstructor
 @Service
 public class AccountsServiceImpl implements AccountsService {
 
-    @Autowired
     private CustomerRepository customerRepository;
-    @Autowired
     private AccountsRepository accountsRepository;
 
     @Override
@@ -32,10 +33,8 @@ public class AccountsServiceImpl implements AccountsService {
         if(foundCustomer.isPresent()){
                 throw new RuntimeException("Customer already exists for mobile number - " + mobileNumber);
         }
-
         Customer customer = CustomerMapper.mapToCustomer(customerDto, new Customer());
         Customer savedCustomer = customerRepository.save(customer);
-
         AccountsDto accountsDto = openAccount(savedCustomer.getCustomerId());
         Accounts accounts = AccountsMapper.mapToAccounts(accountsDto, new Accounts());
         accounts.setCustomerId(savedCustomer.getCustomerId());
