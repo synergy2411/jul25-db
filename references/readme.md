@@ -72,25 +72,38 @@
 
 # Folder Structure
 - Controller: AccountsController
-- Entity
-- Repository
-- Services
-- DTOs
+- Entity: (Customer and Accounts)
+- Repository: (CustomerRepo and AccountsRepo)
+- DTOs: Data Transfer Object (CustomerDto, AccountsDto, ResponseDto, ErrorResponseDto)
+- Mapper : 
+  - (CustomerMapper -> transfer data from / to Customer / CustomerDto)
+  - (AccountsMapper -> transfer data from / to Accounts / AccountsDto )
+- Services: AccountsService Class (business logic and JPA Operation)
+  - create: Customer details required to open the account (CustomerDto as Request Body)
+  - fetch
+  - update
+  - delete
 - Exceptions
-- Mapper
 
 
-# Steps
+# Steps to include H2 and JPA
 - Include h2 & data-jpa dependency in pom.xml
 - Create tables - customers and accounts (schema.sql))
 - Enable the h2 console (application.yml)
   - spring.h2.console.enabled = true
-- Set the properties for Datasource
+- Set properties for Datasource
   
 - Visit -  http://localhost:8080/h2-console
 
+# Actuator : for health monitoring
+- include the actuator dependency (pom.xml)
+  - spring-boot-starter-actuator
+- Update the application properties (application.yml)
+  - management.endpoints.web.exposure.include="*"
+- Visit: http://localhost:8080/actuator
 
-
+# Lombok Support: for Annotations
+- Include 'lombok' dependency in pom.xml
 
 
 

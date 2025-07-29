@@ -14,3 +14,9 @@ spring:
       databasePlatform: org.hibernate.dialect.H2Dialect
       hibernate:
         ddlAuto: update
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
