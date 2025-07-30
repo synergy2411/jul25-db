@@ -89,4 +89,21 @@ public class AccountsServiceImpl implements AccountsService {
         return isDeleted;
     }
 
+    @Override
+    public Boolean update(CustomerDto customerDto) {
+        boolean isUpdated = false;
+        Optional<Customer> foundCustomer = customerRepository.findByMobileNumber(customerDto.getMobileNumber());
+        if (foundCustomer.isPresent()) {
+            if(customerDto.getName() != null) {
+                foundCustomer.get().setName(customerDto.getName());
+            }
+            if(customerDto.getEmail() != null) {
+                foundCustomer.get().setEmail(customerDto.getEmail());
+            }
+            customerRepository.save(foundCustomer.get());
+            isUpdated = true;
+        }
+        return isUpdated;
+    }
+
 }

@@ -48,5 +48,17 @@ public class AccountsController {
         }
     }
 
+    @PatchMapping("/update")
+    public ResponseEntity<ResponseDto> update(@RequestBody CustomerDto customerDto){
+        Boolean isUpdated = accountsService.update(customerDto);
+        if(isUpdated){
+            return ResponseEntity.status(HttpStatus.ACCEPTED)
+                    .body(new ResponseDto("Updated successfully.",HttpStatus.ACCEPTED));
+        }else{
+            return ResponseEntity.status(HttpStatus.NOT_FOUND)
+                    .body(new ResponseDto("Unable to update record for mobile number - " + customerDto.getMobileNumber(), HttpStatus.ACCEPTED));
+        }
+    }
+
 
 }

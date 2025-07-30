@@ -110,6 +110,7 @@
   - Create: /api/create (POST Mapping + RequestBody - CustomerDto)
   - Read: /api/fetch (GET Mapping + RequestParameter - Mobile Number)
   - Delete: /api/delete (Delete Mapping + RequestParameter - Mobile Number)
+  - Update: /api/update (Patch Mapping + Request Body - Customer Dto (name, email, mobileNumber))
 - Documentation - Swagger UI
 - Zipkin Server
 - Security
