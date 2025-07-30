@@ -14,6 +14,10 @@ spring:
       databasePlatform: org.hibernate.dialect.H2Dialect
       hibernate:
         ddlAuto: update
+  security:
+    user:
+      name: admin
+      password: tiger
 
 management:
   endpoints:

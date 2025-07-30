@@ -9,6 +9,7 @@ import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.AllArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 @Tag(
@@ -36,6 +37,7 @@ public class AccountsController {
             description = "Will create new record for the given customer details",
             responseCode = "201"
     )
+    @PreAuthorize("hasRole('ADMIN')")
     @PostMapping("/create")
     public ResponseEntity<ResponseDto> create(@RequestBody CustomerDto customerDto){
         Long accountsId = accountsService.create(customerDto);
@@ -48,6 +50,7 @@ public class AccountsController {
             description = "Will fetch the record for the given customer mobile number",
             responseCode = "200"
     )
+    @PreAuthorize("hasRole('MANAGER')")
     @GetMapping("/fetch")
     public ResponseEntity<CustomerDto> fetch(@RequestParam String mobileNumber){
         CustomerDto customerDto = accountsService.fetch(mobileNumber);
@@ -58,7 +61,8 @@ public class AccountsController {
             description = "Will delete the record for the given customer mobile number",
             responseCode = "200"
     )
-    @DeleteMapping("/delete")
+    @PreAuthorize("hasRole('ADMIN')")
+    @DeleteMapping("delete")
     public ResponseEntity<ResponseDto> delete(@RequestParam String mobileNumber){
         Boolean isDeleted = accountsService.delete(mobileNumber);
         if(isDeleted){
@@ -74,6 +78,7 @@ public class AccountsController {
             description = "Will update customer name and email based upon the mobile number",
             responseCode = "200"
     )
+    @PreAuthorize("hasRole('ADMIN')")
     @PatchMapping("/update")
     public ResponseEntity<ResponseDto> update(@RequestBody CustomerDto customerDto){
         Boolean isUpdated = accountsService.update(customerDto);
