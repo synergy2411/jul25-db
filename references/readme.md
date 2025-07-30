@@ -29,15 +29,15 @@
   - @Mock Annotation
 
 # Day 05 and Day 06 -
-- Spring
-- SpringBoot
-- Spring Web
+- Spring: Container for creating and manging beans; IoC; DI
+- SpringBoot: Production ready App...quickly. Starters: web - Tomcat, Auto-configuration, Jackson Binding etc
+- Spring Web: starter to create MVC App
+- Actuators (Monitoring): to monitor App health and various metrics available
+- Maven: Dependency Management Tool; POM.xml
+- REST Endpoints : Resources (/courses, /products etc)
 - Spring Security
 - Documentation
 - Distributed Tracing (Zipkin)
-- Actuators (Monitoring)
-- REST Endpoints
-- Maven
 
 
 ----
@@ -65,10 +65,10 @@
 - JPA
 - Lombok: @NoArgsContructor, @AllArgsConstructor, @Getter, @Setter, @Data
 - Starter Web
+- Actuator
 - Documentation
 - Distributed Tracing (Zipkin)
 - Security
-- Actuator
 
 # Folder Structure
 - Controller: AccountsController
@@ -104,12 +104,12 @@
 
 # Lombok Support: for Annotations
 - Include 'lombok' dependency in pom.xml
-
-
-
-
-
-
-
-
-
+--------
+# Day 06
+- Accounts App (CRUD Operations)
+  - Create: /api/create (POST Mapping + RequestBody - CustomerDto)
+  - Read: /api/fetch (GET Mapping + RequestParameter - Mobile Number)
+- Documentation - Swagger UI
+- Zipkin Server
+- Security
+- Testing

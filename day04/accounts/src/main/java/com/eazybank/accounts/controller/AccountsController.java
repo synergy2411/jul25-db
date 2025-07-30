@@ -24,10 +24,16 @@ public class AccountsController {
 
     @PostMapping("/create")
     public ResponseEntity<ResponseDto> create(@RequestBody CustomerDto customerDto){
-        accountsService.create(customerDto);
+        Long accountsId = accountsService.create(customerDto);
         return ResponseEntity.status(201)
-                .body(new ResponseDto("CREATED", HttpStatus.CREATED));
+                .body(new ResponseDto("CREATED - " + accountsId, HttpStatus.CREATED));
 
+    }
+
+    @GetMapping("/fetch")
+    public ResponseEntity<CustomerDto> fetch(@RequestParam String mobileNumber){
+        CustomerDto customerDto = accountsService.fetch(mobileNumber);
+        return ResponseEntity.status(HttpStatus.OK).body(customerDto);
     }
 
 
