@@ -109,6 +109,7 @@
 - Accounts App (CRUD Operations)
   - Create: /api/create (POST Mapping + RequestBody - CustomerDto)
   - Read: /api/fetch (GET Mapping + RequestParameter - Mobile Number)
+  - Delete: /api/delete (Delete Mapping + RequestParameter - Mobile Number)
 - Documentation - Swagger UI
 - Zipkin Server
 - Security

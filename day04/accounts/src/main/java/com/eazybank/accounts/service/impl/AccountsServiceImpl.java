@@ -74,4 +74,19 @@ public class AccountsServiceImpl implements AccountsService {
         return customerDto;
     }
 
+    @Override
+    public Boolean delete(String mobileNumber) {
+        boolean isDeleted = false;
+        Optional<Customer> foundCustomer = customerRepository.findByMobileNumber(mobileNumber);
+        if (foundCustomer.isPresent()) {
+            Accounts foundAccount = accountsRepository.findByCustomerId(foundCustomer.get().getCustomerId()).orElseThrow(
+                    () -> new RuntimeException("Accounts not found for customer id - " + foundCustomer.get().getCustomerId())
+            );
+            accountsRepository.delete(foundAccount);
+            customerRepository.delete(foundCustomer.get());
+            isDeleted = true;
+        }
+        return isDeleted;
+    }
+
 }

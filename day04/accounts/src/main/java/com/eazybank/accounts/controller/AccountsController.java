@@ -36,5 +36,17 @@ public class AccountsController {
         return ResponseEntity.status(HttpStatus.OK).body(customerDto);
     }
 
+    @DeleteMapping("/delete")
+    public ResponseEntity<ResponseDto> delete(@RequestParam String mobileNumber){
+        Boolean isDeleted = accountsService.delete(mobileNumber);
+        if(isDeleted){
+            return ResponseEntity.status(HttpStatus.OK)
+                    .body(new ResponseDto("Deleted successfully", HttpStatus.OK));
+        }else{
+            return ResponseEntity.status(HttpStatus.NOT_FOUND)
+                    .body(new ResponseDto("Unable to delete for mobile number - " + mobileNumber, HttpStatus.NOT_FOUND));
+        }
+    }
+
 
 }
