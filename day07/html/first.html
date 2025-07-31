@@ -5,7 +5,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>My First Page</title>
-    <style>
+    <!-- Internal Style Sheet -->
+    <!-- <style>
         h1{
             color: goldenrod;
         }
@@ -20,9 +21,21 @@
           margin: 12px;
           background-color: goldenrod;
         }
-    </style>
+    </style> -->
+
+    <!-- External Style Sheet -->
+     <link rel="stylesheet" href="./styles/app.css" />
   </head>
   <body>
+
+    <!-- BoxModel -->
+
+    <div id="container">
+        <button class="like">Like Me ❤️</button>
+        <p style="font-size: 1.2rem;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni fuga nulla qui accusamus, laborum error, accusantium reiciendis nam alias, dolores minima fugit aliquid quasi libero!</p>
+    </div>
+
+
     <!-- header -->
      <header>
         <nav>
@@ -43,7 +56,7 @@
     <!-- sidebar -->
      <aside>
         <h3>Other Related Links</h3>
-        <ul>
+        <ul id="related-links" >
             <li>
                 RelatedLink_1
             </li>
@@ -58,26 +71,32 @@
 
      <!-- main -->
      <marquee>
-        <h2>Sale is live now...</h2>
+        <h2 style="background-color: gold; color: #fff;">Sale is live now...</h2>
     </marquee>
      <main>
         <section>
             <!-- All products -->
-             <h1>Our Products</h1>
+             <h1 name="our-products">Our Products</h1>
              <div> 
                 <!-- IPhone -->
                  <img width="200" height="200" src="https://www.imagineonline.store/cdn/shop/files/iPhone_15_Pink_PDP_Image_Position-1__en-IN.jpg" alt="">
                 <h3>Apple Iphone 15</h3>
                  <h5>Price: INR 59999/-</h5>
-                 <button onclick="onShowInfo()">Show More</button>
-                 <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Explicabo alias ullam repudiandae voluptate, quis, modi provident soluta beatae recusandae quaerat numquam voluptas nesciunt, dolorum vel?</p>
+                 <button class="more-info" onclick="onShowInfo()">Show More</button>
+                 <p class="product-desc">
+                    <span>Lorem ipsum dolor sit amet.</span>
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Explicabo alias ullam repudiandae voluptate, quis, modi provident soluta beatae recusandae quaerat numquam voluptas nesciunt, dolorum vel?</p>
              </div>
              <div>
                 <!-- Samsung -->
                  <img width="200" height="200" src="https://m.media-amazon.com/images/I/71P85R392uL.jpg" alt="">
                  <h3>Samsung S25 Ultra</h3>
                  <h5>Price: INR 79999/-</h5>
-                 <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellendus rerum autem odit ratione sed aut sint rem debitis accusamus numquam quae possimus hic ducimus, minima sequi quo perspiciatis quisquam dolorem nisi fugit sunt tempore. Mollitia repudiandae, ullam similique suscipit voluptates nisi earum hic distinctio, totam et eos enim! Pariatur, necessitatibus!</p>
+                 <p id="second-paragraph" class="product-desc">
+                    <span>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis, nihil?
+                    </span>
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellendus rerum autem odit ratione sed aut sint rem debitis accusamus numquam quae possimus hic ducimus, minima sequi quo perspiciatis quisquam dolorem nisi fugit sunt tempore. Mollitia repudiandae, ullam similique suscipit voluptates nisi earum hic distinctio, totam et eos enim! Pariatur, necessitatibus!</p>
              </div>
         </section>
         <section>
