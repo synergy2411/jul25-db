@@ -12,4 +12,10 @@ public class CustomerDto {
     private String email;
     private String mobileNumber;
     private AccountsDto accountsDto;
+
+    public CustomerDto(String name, String email, String mobileNumber) {
+        this.name = name;
+        this.email = email;
+        this.mobileNumber = mobileNumber;
+    }
 }

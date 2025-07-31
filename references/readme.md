@@ -112,6 +112,25 @@
   - Delete: /api/delete (Delete Mapping + RequestParameter - Mobile Number)
   - Update: /api/update (Patch Mapping + Request Body - Customer Dto (name, email, mobileNumber))
 - Documentation - Swagger UI
-- Zipkin Server
-- Security
-- Testing
+- Zipkin Server: Distributed Tracing: Timing Data
+- Monitoring: Actuator: metrics-> health, beans, live, ready etc
+- Security: Authentication and Authorization;
+  - spring-boot-starter-security
+  - Security Filter 
+    - Enable Http-basic auth
+    - Disable the FormLogin (user, GeneratedPassword)
+    - InMemoryUserDetailsService
+    - JdbcUserDetailsManager (User, Authority)
+    - @PreAuthorize("hasRole('ADMIN')") : Method level Security
+    - RequestMatcher("*/admin/**").authenticate().hasRole("ADMIN") : Endpoints secured
+- Testing:
+  - JUnit 5
+  - Mockito
+  - @Test
+  - @DisplayName
+  - @BeforeEach
+  - @BeforeAll
+  - @AfterEach
+  - @AfterAll
+  - @Mock
+  - @InjectMock

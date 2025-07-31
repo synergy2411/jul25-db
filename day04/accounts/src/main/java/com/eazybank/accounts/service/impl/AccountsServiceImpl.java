@@ -49,8 +49,7 @@ public class AccountsServiceImpl implements AccountsService {
         return savedAccount.getAccountId();
     }
 
-
-    private AccountsDto openAccount(long customerId) {
+    public AccountsDto openAccount(long customerId) {
         AccountsDto accountsDto = new AccountsDto();
         accountsDto.setAccountType("SAVINGS");
         accountsDto.setBranchAddress("201, Main Road, Wakad, Pune");
@@ -58,7 +57,6 @@ public class AccountsServiceImpl implements AccountsService {
         accountsDto.setAccountNumber(randomNumber);
         return accountsDto;
     }
-
 
     @Override
     public CustomerDto fetch(String mobileNumber) {
