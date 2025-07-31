@@ -30,10 +30,10 @@
 
     <!-- BoxModel -->
 
-    <div id="container">
+    <!-- <div id="container">
         <button class="like">Like Me ❤️</button>
         <p style="font-size: 1.2rem;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni fuga nulla qui accusamus, laborum error, accusantium reiciendis nam alias, dolores minima fugit aliquid quasi libero!</p>
-    </div>
+    </div> -->
 
 
     <!-- header -->
@@ -53,6 +53,7 @@
         </nav>
      </header>
 
+     <div id="main-body-container">
     <!-- sidebar -->
      <aside>
         <h3>Other Related Links</h3>
@@ -70,26 +71,30 @@
      </aside>
 
      <!-- main -->
-     <marquee>
-        <h2 style="background-color: gold; color: #fff;">Sale is live now...</h2>
-    </marquee>
-     <main>
+    
+     <main> 
+        <!-- <marquee>
+            <h2 style="background-color: gold; color: #fff;">Sale is live now...</h2>
+        </marquee> -->
         <section>
             <!-- All products -->
              <h1 name="our-products">Our Products</h1>
-             <div> 
+             <div class="product-item-container"> 
                 <!-- IPhone -->
                  <img width="200" height="200" src="https://www.imagineonline.store/cdn/shop/files/iPhone_15_Pink_PDP_Image_Position-1__en-IN.jpg" alt="">
-                <h3>Apple Iphone 15</h3>
+                <div>
+                 <h3>Apple Iphone 15</h3>
                  <h5>Price: INR 59999/-</h5>
                  <button class="more-info" onclick="onShowInfo()">Show More</button>
                  <p class="product-desc">
                     <span>Lorem ipsum dolor sit amet.</span>
                     Lorem, ipsum dolor sit amet consectetur adipisicing elit. Explicabo alias ullam repudiandae voluptate, quis, modi provident soluta beatae recusandae quaerat numquam voluptas nesciunt, dolorum vel?</p>
+                    </div>
              </div>
-             <div>
+             <div class="product-item-container">
                 <!-- Samsung -->
                  <img width="200" height="200" src="https://m.media-amazon.com/images/I/71P85R392uL.jpg" alt="">
+                 <div>
                  <h3>Samsung S25 Ultra</h3>
                  <h5>Price: INR 79999/-</h5>
                  <p id="second-paragraph" class="product-desc">
@@ -97,6 +102,7 @@
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis, nihil?
                     </span>
                     Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellendus rerum autem odit ratione sed aut sint rem debitis accusamus numquam quae possimus hic ducimus, minima sequi quo perspiciatis quisquam dolorem nisi fugit sunt tempore. Mollitia repudiandae, ullam similique suscipit voluptates nisi earum hic distinctio, totam et eos enim! Pariatur, necessitatibus!</p>
+             </div>
              </div>
         </section>
         <section>
@@ -106,6 +112,8 @@
             <!-- Client Testmonials -->
         </section>
      </main>
+
+     </div>
 
     <!-- footer -->
      <footer>

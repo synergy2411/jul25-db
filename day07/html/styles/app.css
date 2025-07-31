@@ -2,16 +2,41 @@
   color: blue;
 } */
 
+/* 1rem = 16px */
+/* 1rem = 10px */
+
+html {
+  font-size: 62.5%;
+}
+body {
+  max-width: 70%;
+  margin: 0 auto;
+}
 header > nav {
   background-color: #000;
-  padding: 8px 0;
+  padding: 1rem 0;
+}
+
+nav ul {
+  display: flex;
+  flex-flow: row;
+  justify-content: end;
 }
 nav ul > li {
-  display: inline-block;
-  padding: 6px 12px;
+  /* display: inline-block; */
+  padding: 0.6rem 1.2rem;
   margin: 0 12px;
   border: 1px solid red;
   background-color: gold;
+}
+
+nav ul > li:hover {
+  background-color: rgb(189, 180, 130);
+}
+
+#main-body-container {
+  display: flex;
+  gap: 24px;
 }
 
 p {
@@ -31,6 +56,7 @@ p {
 #related-links {
   list-style: none;
   margin: 0;
+  padding: 0;
   display: inline-block;
 }
 
@@ -43,10 +69,10 @@ p {
   font-size: 2rem;
 }
 
-div,
+/* div,
 h1 {
   border: 2px red dashed;
-}
+} */
 
 /* Link Visited Hover Active - LVHA*/
 
@@ -54,10 +80,11 @@ li > a:link {
   color: green;
 }
 li > a:visited {
-  color: orange;
+  color: rgb(45, 30, 2);
 }
 li > a:hover {
-  font-size: 1.2rem;
+  /* font-size: 1.2rem; */
+  /* color: rgb(10, 9, 9); */
 }
 li > a:active {
   color: blue;
@@ -75,9 +102,9 @@ p > span {
   color: #fff;
 }
 
-div {
+/* div {
   background-color: lightblue;
-}
+} */
 
 #container {
   box-sizing: border-box;
@@ -102,6 +129,10 @@ div {
   display: inline-block;
 }
 
+.product-item-container {
+  display: flex;
+  gap: 12px;
+}
 .more-info {
   display: inline-block;
   padding: 8px 16px;
@@ -110,3 +141,26 @@ div {
 /* Total Width Occupied = ? 210,  */
 /* 200 + 10 + 10 + 3 + 3 => 226px */
 /* 12 + 12 + 3 + 3+ 10 + 10 + 175 -> 200px */
+
+@media screen and (max-width: 1200px) {
+  body {
+    background-color: beige;
+  }
+}
+@media screen and (max-width: 972px) {
+  body {
+    background-color: grey;
+  }
+}
+@media screen and (max-width: 678px) {
+  body {
+    background-color: lightblue;
+    max-width: 100%;
+  }
+  img {
+    display: none;
+  }
+  nav ul {
+    flex-direction: column;
+  }
+}
