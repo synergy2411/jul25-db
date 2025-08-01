@@ -132,7 +132,139 @@
 
 // FUNCTIONS
 
-let addition = function (n1, n2) {
-  return n1 + n2;
-};
-console.log(addition(4, 5));
+// const result = add(5, 6);
+// console.log("Result : ", result);
+
+// Function declaration
+// function add(n1, n2) {
+//   return n1 + n2;
+// }
+
+// Function Express
+// let addition = function (n1, n2) {
+//   return n1 + n2;
+// };
+// console.log(addition(4, 5));
+
+// Arrow Function
+// let sum = (n1, n2) => n1 + n2;
+// console.log("Sum : ", sum(10, 12));
+
+// FUNCTIONS AS FIRST CLASS CITIZENS
+
+// FUNCTION AS ARGUMENT
+// function greet(cb) {
+//   cb();
+// }
+
+// greet(function () {
+//   console.log("Function supplied as argument.");
+// });
+
+// RETURNED FUNCTION AS VALUE
+// function doSomething() {
+//   return function () {
+//     console.log("Nested Function!!");
+//   };
+// }
+// const nestedFn = doSomething();
+// console.log(nestedFn());
+
+// CLOSURE: Process of binding outer scope variables with the nested functions
+// function testClosure() {
+//   let x = 2;
+//   return function () {
+//     return "NESTED FUNCTION (X) " + ++x;
+//   };
+// }
+
+// const nestedFn = testClosure();
+// console.log(nestedFn()); // 3
+// console.log(nestedFn()); // 4
+// console.log(nestedFn()); // 5
+
+// function curriedDemo(n1) {
+//   return function (n2) {
+//     return function (n3) {
+//       return n1 + n2 + n3;
+//     };
+//   };
+// }
+
+// const firstNestedFn = curriedDemo(10);
+// const secondNestedFn = firstNestedFn(12);
+// console.log("Curried Result : ", secondNestedFn(15));
+// console.log("More Curried : ", curriedDemo(1)(2)(3));
+
+// function buildTicket(transport) {
+//   let numOfPassengers = 0;
+//   return function (name) {
+//     return `
+// Hello Mr/s. ${name},
+// You are going via ${transport}.
+// Your ticket ID number is #${++numOfPassengers}!
+//         `;
+//   };
+// }
+
+// const shipTransport = buildTicket("Ship");
+// console.log(shipTransport("Monica"));
+// console.log(shipTransport("Ross"));
+
+// const kangarooTansport = buildTicket("Kangaroo");
+// console.log(kangarooTansport("Joey"));
+
+// SCOPE CHAIN: local env -> outer env -> global env
+// let x = 101;
+
+// function a() {
+//   //   let x = 201;
+//   function b() {
+//     // let x = 301;
+//     console.log(x); // x = 301
+//   }
+//   b();
+// }
+
+// Lexical Environment: outer environment (refers to placement of function)
+// let x = 501;            // Global Environment
+
+// function a() {
+//   let x = 401;
+//   b();
+// }
+
+// function b() {
+//   console.log(x); // 501
+// }
+
+// function a() {
+//     console.log(x);         // 101
+// }
+
+// a();
+
+// ASYNC - TIMER
+// console.log("Start");
+
+// // Executed by different thread environment
+// setTimeout(() => {
+//   console.log("Timer for 2 seconds");
+// }, 2000);
+
+// fetch("https://api.github.com/users/synergy2411")
+//   .then((response) => response.json())
+//   .then((userDetails) => console.log(userDetails))
+//   .catch((err) => console.error(err));
+
+// console.log("End");
+
+for (key in window) {
+  console.log(key);
+}
+
+// window.alert("Who's this?");
+
+// alert("I'm here!");
+
+confirm("Are you Sure?");

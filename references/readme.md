@@ -163,4 +163,7 @@
   - JavaScript engine runs in two phase :
     - Creational Phase : allocates the memory
     - Executional Phase: executes the code
+  - AST : Abstract Syntax Tree
+  - BOM (window): Browser Object Model
+  - DOM (document) : Document Object Model
 - React
