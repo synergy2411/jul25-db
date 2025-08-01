@@ -166,4 +166,36 @@
   - AST : Abstract Syntax Tree
   - BOM (window): Browser Object Model
   - DOM (document) : Document Object Model
-- React
+
+# JavaScript Libraries and Frameworks
+
+- React: 35kb, Render the UI quickly; Virtual DOM; Reconciliation Process; Diffing Algorithm; Props, State, JSX, hooks etc; Component based architecture;
+- jQuery: DOM manipulation; Animation, AJAX Calls
+- Bootstrap: Material UI Components
+- KnockoutJS: MVVM Pattern; 2 way data binding
+- BackboneJS: MVC Pattern at client side
+- Stencil: Component based architecture
+- Electron: Standalone Desktop Apps
+- PolymerJS: Feature Rich Web Components
+- D3: Charts (Bar, Pie etc)
+- NextJS\*: Server-side framework for React App; SPA
+- Vue\*: Template, HTTP Call, Components, State Management, 2 way data binding, MVC Pattern, SPA etc
+- Angular\* (v1.x -> 2011): Template, HTTP Call, Components, State Management, 2 way data binding, MVC Pattern, SPA etc
+- Ionic\*: Mobile Apps (React/Angular/Vue)
+- EmberJS\* (2010): Frequent changes in API
+
+- NodeJS: Server-Side Platform
+- ExpressJs/Koa/Hapi/KrakenJS/SailsJS: Web App Server for NodeJS Platform
+
+# Install NodeJS from https://www.nodejs.org
+
+# Generate React Boilerplate Code-
+
+- npm create vite@latest
+- cd frontend
+- npm install
+- npm run dev
+
+# React Concepts
+
+- Lifting up the state (Data transfer from child to parent component)

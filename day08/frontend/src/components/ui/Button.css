@@ -1,0 +1,11 @@
+.styled-button {
+  background-color: goldenrod;
+  border-radius: 10px;
+  padding: 16px 32px;
+  border: none;
+  margin: 16px;
+}
+
+.styled-button:hover {
+  background-color: rgb(182, 131, 3);
+}
