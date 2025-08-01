@@ -149,7 +149,18 @@
 
 # Day 07
 
-- HTML
+- HTML: creates the structure and display the content
   - Semantic Elements: meaningful elements
-- CSS
+- CSS: Selectors; change the appearence and layout(Float, Flexbox, Grid) of the page
 - Labs
+
+---
+
+# Day 08
+
+- JavaScript
+  - ECMA Specification (ES5)
+  - JavaScript engine runs in two phase :
+    - Creational Phase : allocates the memory
+    - Executional Phase: executes the code
+- React
