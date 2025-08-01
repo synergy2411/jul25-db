@@ -259,12 +259,12 @@
 
 // console.log("End");
 
-for (key in window) {
-  console.log(key);
-}
+// for (key in window) {
+//   console.log(key);
+// }
 
 // window.alert("Who's this?");
 
 // alert("I'm here!");
 
-confirm("Are you Sure?");
+// confirm("Are you Sure?");
