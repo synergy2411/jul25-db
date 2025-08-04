@@ -269,4 +269,12 @@
 # useCallback() / useMemo() :
 
 - Memoized Callback
-- MEmoized Value
+- Memoized Value
+
+# React Router - Single Page Apps (SPA)
+
+- Routing and Navigation
+
+# Routing and Navigation
+
+- npm install react-router
