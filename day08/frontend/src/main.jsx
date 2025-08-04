@@ -1,13 +1,10 @@
 import { createRoot } from "react-dom/client";
-import App from "./App.jsx";
-import { createBrowserRouter, Outlet, RouterProvider } from "react-router";
-import JsxDemo from "./components/demo/JsxDemo.jsx";
-import StateDemo from "./components/demo/StateDemo.jsx";
-import HomePage from "./components/Pages/Home/HomePage.jsx";
-import CoursesPage from "./components/Pages/Courses/Courses.jsx";
-import RootLayout from "./components/RootLayout/RootLayout.jsx";
-import CourseDetails from "./components/Pages/Courses/CourseDetails.jsx";
+import { createBrowserRouter, RouterProvider } from "react-router";
 import ErrorPage from "./components/Error/ErrorPage.jsx";
+import CourseDetails from "./components/Pages/Courses/CourseDetails.jsx";
+import CoursesPage from "./components/Pages/Courses/Courses.jsx";
+import HomePage from "./components/Pages/Home/HomePage.jsx";
+import RootLayout from "./components/RootLayout/RootLayout.jsx";
 
 const router = createBrowserRouter([
   {
