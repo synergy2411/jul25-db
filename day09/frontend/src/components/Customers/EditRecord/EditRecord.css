@@ -1,0 +1,19 @@
+.backdrop {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  z-index: 50;
+  background-color: #444;
+  top: 0;
+  left: 0;
+}
+
+.customer-edit-dialog {
+  position: fixed;
+  width: 40vw;
+  height: auto;
+  z-index: 70;
+  background-color: #fff;
+  top: 15vh;
+  left: 30vw;
+}
