@@ -160,6 +160,10 @@
 
 - JavaScript
   - ECMA Specification (ES5)
+  - Function (Callback, HOF, Closures, Lexical Scope)
+    - Function declaration
+    - Function Expression
+    - Arrow Function =>
   - JavaScript engine runs in two phase :
     - Creational Phase : allocates the memory
     - Executional Phase: executes the code
@@ -194,8 +198,41 @@
 - npm create vite@latest
 - cd frontend
 - npm install
-- npm run dev
+- npm run dev (localhost:5173)
 
 # React Concepts
 
+- Components: reusable piece of code
+  - Functional
+  - Class Based
 - Lifting up the state (Data transfer from child to parent component)
+- JSX : {} to embed JavaScript Expressions in JSX
+- Props: using attribute
+
+# SpringBoot App
+
+- Accounts App:
+  - GET: getbyMobileNumber
+  - POST: create
+  - DELETE: deleteByMobileNumber
+  - PATCH: updateCustomer (name, email)
+  - Security (http-basic, Role based security, h2, data jpa)
+  - POST: userLogin (username, password) => username, roles
+  - GET: userLogout
+- Frontend App
+
+# Side effect: any effect for which React is not meant for.
+
+- Remote Server Call
+- State Management
+- Form Validation
+
+# Form Inputs
+
+- Controlled
+  - Maintain State in React Component
+  - Listen to onChange Event
+  - More fine-grain control over input element
+- Uncontrolled
+  - Create Ref Variables
+  - Supply Ref to the form element

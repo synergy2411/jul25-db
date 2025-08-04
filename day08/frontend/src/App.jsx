@@ -1,4 +1,8 @@
+import ClassComponent from "./components/demo/ClassComponent";
+import Controlled from "./components/demo/Controlled";
 import JsxDemo from "./components/demo/JsxDemo";
+import StateDemo from "./components/demo/StateDemo";
+import Uncontrolled from "./components/demo/Uncontrolled";
 import Button from "./components/ui/Button";
 
 function App() {
@@ -11,10 +15,19 @@ function App() {
   return (
     <div>
       <h1>App Works!</h1>
-      <JsxDemo />
+
+      <Uncontrolled />
+
+      {/* <Controlled /> */}
+
+      {/* <ClassComponent /> */}
+
+      {/* <StateDemo /> */}
+
+      {/* <JsxDemo />
       {operations.map((operation) => (
         <Button text={operation} childFunction={childFunction} />
-      ))}
+      ))} */}
       {/* <Button text="Add" childFunction={childFunction} />
       <Button text="Edit" childFunction={childFunction} />
       <Button text="Delete" childFunction={childFunction} /> */}
