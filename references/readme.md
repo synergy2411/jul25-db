@@ -234,5 +234,39 @@
   - Listen to onChange Event
   - More fine-grain control over input element
 - Uncontrolled
-  - Create Ref Variables
+  - Create Ref Variables (useRef() hook)
   - Supply Ref to the form element
+  - ref_variable.cuurent.value
+
+# useEffect() - Three Flavours
+
+- useEffect(cb, []) : (componentDidMount): executes only once for initial rendering of component
+- useEffect(cb, [deps]) : (componentDidUpdate)
+  - At initial rendering
+  - Whenever the deps change
+- useEffect(cb => cleanUp, [Deps]): (componentWillUnmount)
+  - initial rending > cb will execute
+  - if any change in deps >
+    - cleanUp will execute
+    - cb will execute
+  - CleanUp will execute before unmounting the component
+
+# Class Lifecycle Methods
+
+- componentDidMount
+- componentDidUpdate
+- componentWillUnmount
+
+# useContext() Hook
+
+- solves Prop-drilling
+- consumes the data available in context
+
+# useReducer() Hook
+
+- Multiple state slices (inter-dependent)
+
+# useCallback() / useMemo() :
+
+- Memoized Callback
+- MEmoized Value
