@@ -6,8 +6,8 @@
       <list>
         <option value="$PROJECT_DIR$/day03/JUnitTest/pom.xml" />
         <option value="$PROJECT_DIR$/day04/springbasics/pom.xml" />
-        <option value="$PROJECT_DIR$/day04/accounts/pom.xml" />
         <option value="$PROJECT_DIR$/day09/accounts/pom.xml" />
+        <option value="$PROJECT_DIR$/day04/accounts/pom.xml" />
       </list>
     </option>
   </component>

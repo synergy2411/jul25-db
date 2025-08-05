@@ -330,7 +330,9 @@
 # Steps for creating docker image using Dockerfile
 1. Create Dockerfile in root of the project
 2. provide finalname to the jar in pom.xml
-3. Run below command
+3. Build the project for jar file 
+   - Maven Window > Lifecycle > package
+4. Run below command
    - docker build . -t <docker_id/image_name:tag>
 
 # CI/CD
