@@ -278,3 +278,63 @@
 # Routing and Navigation
 
 - npm install react-router
+
+---
+
+# React Topics
+
+- Components: Reusable piece of code
+- Props: Parent Child Communication
+- State: Local data for component; add dynamic behaviour
+- Form Input
+  - Controlled: bind React state variable with Value attribute of input element and onChange event handle
+  - Uncontrolled: refs; useRef(); ref_var.current.value
+- Fetch Call
+- Hooks
+  - useState: create the stateful variable
+  - useEffect: run the side effect code
+  - useContext: avoids prop-drilling
+  - useReducer: multiple inter-dependent state slices
+  - useRef: create the ref_variable; holds reference of DOM element
+  - useCallback: creates memoized callback for optimized child
+  - useMemo: creates the memoized value for optimized child
+- Routing and Navigation
+  - npm install react-router
+  - createBrowserRouter([ROUTE_CONFIG])
+  - NavLink
+  - Link
+  - useNavigatee()
+  - Route Parameter: Dynamic segment(path : ":courseId")
+
+---
+
+# Docker
+
+- Test and Build App quickly
+- Containerization: building up all dependencies
+- Image
+- Container
+- Docker Hub
+- Repository
+- Docker Commands
+- Docker Internals
+- CI/CD Demo
+  - Github Actions
+  
+# Steps for creating docker image using Google Jib
+1. Google jib maven plugin included in pom.xml
+2. Change the image name to docker_id/image_name:tag
+3. Run below command: 
+- mvn compile jib:dockerBuild
+
+# Steps for creating docker image using Dockerfile
+1. Create Dockerfile in root of the project
+2. provide finalname to the jar in pom.xml
+3. Run below command
+   - docker build . -t <docker_id/image_name:tag>
+
+# CI/CD
+
+- Github Account
+- hub.docker.com
+- Docker Desktop

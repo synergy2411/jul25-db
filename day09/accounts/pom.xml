@@ -108,6 +108,7 @@
                 </configuration>
             </plugin>
         </plugins>
+        <finalName>accounts</finalName>
     </build>
 
 </project>
