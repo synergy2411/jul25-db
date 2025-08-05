@@ -324,7 +324,8 @@
 # Steps for creating docker image using Google Jib
 1. Google jib maven plugin included in pom.xml
 2. Change the image name to docker_id/image_name:tag
-3. Run below command: 
+3. Packaging should be jar (update pom.xml)
+4. Run below command: 
 - mvn compile jib:dockerBuild
 
 # Steps for creating docker image using Dockerfile
@@ -335,7 +336,14 @@
 4. Run below command
    - docker build . -t <docker_id/image_name:tag>
 
-# CI/CD
+# Steps for CI/CD using Github Actions
+1. Create git repo
+2. Push source code to the repo
+3. workflow directory and maven.yml file for various jobs
+4. Dockerfile to create the image
+5. Add docker login, docker build and docker push job in maven.yml
+6. Make some changes in app
+7. Push it to the repo
 
 - Github Account
 - hub.docker.com
